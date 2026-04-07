@@ -1,0 +1,40 @@
+.canvas {
+  flex: 1;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at top center, rgba(125, 211, 252, 0.08), transparent 22%),
+    linear-gradient(180deg, #0a0f16 0%, #070b12 100%);
+  padding: 28px 0;
+}
+
+.canvas::-webkit-scrollbar { width: 6px; }
+.canvas::-webkit-scrollbar-thumb { background: #243142; border-radius: 4px; }
+
+.canvas-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 60px;
+}
+
+.slide-wrapper {
+  width: 860px;
+  max-width: 95vw;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.28);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+
+.slide-wrapper:hover {
+  box-shadow: 0 22px 60px rgba(0,0,0,0.34);
+  transform: translateY(-1px);
+}
+
+.slide-wrapper.slide-active {
+  border-color: rgba(125, 211, 252, 0.95);
+  box-shadow: 0 24px 68px rgba(125, 211, 252, 0.10);
+}
